@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 23
-  productGUID: de17a9f8a8071ff41936e5a5aa82104e
+  productGUID: 4c9e36b2372f62444a08d14ee181b53b
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -99,7 +99,7 @@ PlayerSettings:
   xboxEnableFitness: 0
   visibleInBackground: 1
   allowFullscreenSwitch: 1
-  fullscreenMode: 3
+  fullscreenMode: 1
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -135,10 +135,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: -2739179456011281729, guid: 824977efb0c342248b585082119046d5, type: 2}
-  - {fileID: 11400000, guid: b93386948fef9a442a69b5e5397a9ad9, type: 2}
-  - {fileID: -3425648871047555543, guid: fb6091e284af23e40adb947e30366d59, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -715,8 +712,8 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: VIU_XR_GENERAL_SETTINGS;VIU_XR_PACKAGE_METADATA_STORE;VIU_OPENXR_PLUGIN_POSE_CONTROL;VIU_UIS_POSE_CONTROL;VIU_PLUGIN;VIU_SIUMULATOR_SUPPORT;VIU_WAVEVR_HAND_TRACKING_CHECK;VIU_WAVEVR_TRACKER_CHECK;VIU_WAVEVR_SUPPORT;FUSION_WEAVER
-    Standalone: VIU_PLUGIN;VIU_XR_GENERAL_SETTINGS;VIU_XR_PACKAGE_METADATA_STORE;VIU_OPENXR_PLUGIN_POSE_CONTROL;VIU_UIS_POSE_CONTROL;VIU_SIUMULATOR_SUPPORT;FUSION_WEAVER;VIU_WAVEVR_HAND_TRACKING_CHECK;VIU_WAVEVR_TRACKER_CHECK
+    Android: VIU_XR_GENERAL_SETTINGS;VIU_XR_PACKAGE_METADATA_STORE;VIU_OPENXR_PLUGIN_POSE_CONTROL;VIU_UIS_POSE_CONTROL;VIU_PLUGIN;VIU_SIUMULATOR_SUPPORT;VIU_WAVEVR_HAND_TRACKING_CHECK;VIU_WAVEVR_TRACKER_CHECK;VIU_WAVEVR_SUPPORT
+    Standalone: VIU_PLUGIN;VIU_XR_GENERAL_SETTINGS;VIU_XR_PACKAGE_METADATA_STORE;VIU_OPENXR_PLUGIN_POSE_CONTROL;VIU_UIS_POSE_CONTROL;VIU_SIUMULATOR_SUPPORT
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
