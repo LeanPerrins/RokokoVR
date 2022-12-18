@@ -25,11 +25,11 @@ namespace Rokoko.Inputs
             Self
         }
 
-        [HideInInspector] public string profileName = "DemoProfile";
+        public string profileName = "DemoProfile";
 
-        [HideInInspector] public BoneMappingEnum boneMapping;
-        [HideInInspector] public Animator animator;
-        [HideInInspector] public HumanBoneMapping customBoneMapping;
+        public BoneMappingEnum boneMapping;
+        public Animator animator;
+        public HumanBoneMapping customBoneMapping;
 
         [Header("Convert Space")]
         [Tooltip("Convert Studio data to Unity position space")]

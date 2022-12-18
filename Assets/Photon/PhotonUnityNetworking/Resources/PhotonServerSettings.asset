@@ -28,7 +28,7 @@ MonoBehaviour:
     AuthMode: 0
     EnableLobbyStatistics: 0
     NetworkLogging: 1
-  DevRegion: eu
+  DevRegion: 
   PunLogging: 0
   EnableSupportLogger: 0
   RunInBackground: 1
@@ -39,8 +39,34 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
-  - SyncPositions
-  - Test
+  - SyncFill
+  - SyncLavaTrans
+  - SyncValue
+  - SyncValue_Fade
+  - SyncValue_Fade_Stone
+  - Sync__Fader_3_4
+  - Sync_1_Threshold
+  - Sync_2_Threshold
+  - Sync_3_Threshold
+  - Sync_4_Threshold
+  - Sync_Fader_1_2
+  - Sync_Fader_1_2_3_4
+  - Sync_Threshold_Deform
+  - Sync_Fader_3_4
+  - Sync_NoiseScale
+  - Sync_TimeSpeed
+  - <Update>g__Exposure|7_0
+  - <Update>g__Intensity1|7_1
+  - <Update>g__Intensity2|7_2
+  - <Update>g__Exposure|9_0
+  - <Update>g__Intensity1|9_1
+  - <Update>g__Intensity2|9_2
+  - <Update>g__Tree_Fade|9_3
+  - <Update>g__Audio|10_3
+  - <Update>g__Exposure|10_0
+  - <Update>g__Intensity1|10_1
+  - <Update>g__Intensity2|10_2
+  - SyncValue2
   DisableAutoOpenWizard: 1
-  ShowSettings: 1
-  DevRegionSetOnce: 1
+  ShowSettings: 0
+  DevRegionSetOnce: 0

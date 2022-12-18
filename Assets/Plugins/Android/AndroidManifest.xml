@@ -19,10 +19,9 @@
             <meta-data android:name="unityplayer.SkipPermissionsDialog" android:value="true" />
         </activity>
     </application>
-
+    <uses-feature android:name="wave.feature.handtracking" android:required="true" />
     <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
     <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
 
-	<uses-feature android:name="wave.feature.handtracking" android:required="true" />
 </manifest>
 

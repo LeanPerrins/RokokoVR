@@ -514,7 +514,7 @@ namespace HTC.UnityPlugin.Vive
         {
             if (scopes == null || scopes.Count == 0) { return true; }
 
-            var allScopes = ListPool<string>.Get();
+            var allScopes = HTC.UnityPlugin.Utility.ListPool<string>.Get();
             try
             {
                 var manifestString = File.ReadAllText(RegistryToolSettings.Instance().ProjectManifestPath);
@@ -543,7 +543,7 @@ namespace HTC.UnityPlugin.Vive
             }
             finally
             {
-                ListPool<string>.Release(allScopes);
+                HTC.UnityPlugin.Utility.ListPool<string>.Release(allScopes);
                 allScopes = null;
             }
 

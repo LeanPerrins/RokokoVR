@@ -37,6 +37,6 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
         Debug.Log("Joined Room");
-        PhotonNetwork.LoadLevel("RokokoVR");
+        PhotonNetwork.LoadLevel("UnderInfluence");
     }
 }
