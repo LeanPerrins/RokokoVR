@@ -28,7 +28,7 @@ MonoBehaviour:
     AuthMode: 0
     EnableLobbyStatistics: 0
     NetworkLogging: 1
-  DevRegion: 
+  DevRegion: eu
   PunLogging: 0
   EnableSupportLogger: 0
   RunInBackground: 1
@@ -67,6 +67,9 @@ MonoBehaviour:
   - <Update>g__Intensity1|10_1
   - <Update>g__Intensity2|10_2
   - SyncValue2
+  - SetParticleSystem
+  - SetParticleSystemL
+  - SetParticleSystemR
   DisableAutoOpenWizard: 1
   ShowSettings: 0
-  DevRegionSetOnce: 0
+  DevRegionSetOnce: 1

@@ -1,2 +1,3 @@
-For for info about the plugin please visit our page at GitHub
-https://github.com/Rokoko/rokoko-studio-live-unity/
+version https://git-lfs.github.com/spec/v1
+oid sha256:a82600c4fde7b36cb662fd4bc857b3651ab595887974428b5c4e49fb379746ec
+size 114
