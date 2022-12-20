@@ -86,6 +86,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4242482846685892375, guid: 8e458250315856f45af337fde46d132c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fdbea99add67645448922eccfcfb0171, type: 2}
     - target: {fileID: 919132149155446097, guid: 8e458250315856f45af337fde46d132c, type: 3}
       propertyPath: m_Name
       value: OculusCustomLeft
@@ -148,6 +152,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6598475261284798899, guid: ae85747fcb8d9df4dadc4626b8085789, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fdbea99add67645448922eccfcfb0171, type: 2}
     - target: {fileID: 919132149155446097, guid: ae85747fcb8d9df4dadc4626b8085789, type: 3}
       propertyPath: m_Name
       value: OculusCustomRight
@@ -210,6 +218,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7ebc7a7f5c3248b44a26fcc7f3e9cb4e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fdbea99add67645448922eccfcfb0171, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ebc7a7f5c3248b44a26fcc7f3e9cb4e, type: 3}
       propertyPath: m_Name
       value: SimpleCharacter_Torso
@@ -272,6 +284,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: aaccf7fd044c0b64a8213dbcd9efb932, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fdbea99add67645448922eccfcfb0171, type: 2}
     - target: {fileID: 919132149155446097, guid: aaccf7fd044c0b64a8213dbcd9efb932, type: 3}
       propertyPath: m_Name
       value: SimpleCharacter_Head

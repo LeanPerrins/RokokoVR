@@ -6,16 +6,13 @@ using Photon.Realtime;
 
 public class PlayerController : MonoBehaviourPun, IPunObservable
 {
-
+    public PlayerGroup[] PlayerGroups;
+    public NetworkPlayer OwningPlayer;
     public bool canDraw = false;
     public bool canSeeGroup = false;
     public bool canSeeAll = false;
 
-    [ContextMenu("Do Something")]
-    void DoSomething()
-    {
-        Debug.Log("Perform operation");
-    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +22,25 @@ public class PlayerController : MonoBehaviourPun, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            this.photonView.RPC("HideOtherPlayersFormOwningPlayer", RpcTarget.All, true);
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            this.photonView.RPC("ShowOtherPlayersFormOwningPlayer", RpcTarget.All, true);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            this.photonView.RPC("ChangeDrawModeForPlayers", RpcTarget.All, false);
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            this.photonView.RPC("ChangeDrawModeForPlayers", RpcTarget.All, true);
+        }
     }
 
+    
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
@@ -40,8 +53,21 @@ public class PlayerController : MonoBehaviourPun, IPunObservable
         }
     }
 
+    [PunRPC]
     private void ChangeDrawModeForPlayers(bool canIDraw)
     {
-        Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        OwningPlayer.DisableOrEnableParticlesRPC(canIDraw);
+    }
+
+    [PunRPC]
+    private void HideOtherPlayersFormOwningPlayer(bool HideGroup)
+    {
+        OwningPlayer.FindAndHideOtherPlayers(HideGroup);
+    }
+
+    [PunRPC]
+    private void ShowOtherPlayersFormOwningPlayer(bool ShowGroup)
+    {
+        OwningPlayer.FindAndShowOtherPlayers(ShowGroup);
     }
 }
