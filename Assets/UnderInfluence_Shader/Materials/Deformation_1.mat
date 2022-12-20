@@ -82,9 +82,9 @@ Material:
     - _Fader_1_2: 0
     - _Fader_1_2_3_4: 0
     - _Fader_3_4: 0
-    - _NoiseScale: 4.5
+    - _NoiseScale: 0.511811
     - _Threshold_Deform: 1.9933858
-    - _TimeSpeed: 0.5
+    - _TimeSpeed: 0.511811
     m_Colors:
     - _1_Lower_Tex_Offset: {r: 3, g: 3, b: 0, a: 0}
     - _1_Upper_Tex_Offset: {r: 1, g: 1, b: 0, a: 0}

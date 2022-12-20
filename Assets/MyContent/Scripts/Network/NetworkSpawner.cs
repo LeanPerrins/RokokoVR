@@ -25,7 +25,7 @@ public class NetworkSpawner : MonoBehaviour
     {
 
 #if UNITY_EDITOR
-        //return;
+        return;
 #endif
 
 #if UNITY_ANDROID

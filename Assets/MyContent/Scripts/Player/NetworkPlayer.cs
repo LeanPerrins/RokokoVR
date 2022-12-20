@@ -90,8 +90,6 @@ public class NetworkPlayer : MonoBehaviourPun
         {
             
             playerController.OwningPlayer = this;
-
-            return;
             MeshRenderer[] playerMeshRenderers = PlayerModel.transform.GetComponentsInChildren<MeshRenderer>();
             foreach (MeshRenderer mr in playerMeshRenderers)
             {
