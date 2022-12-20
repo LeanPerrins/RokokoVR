@@ -38,6 +38,10 @@ public class PlayerController : MonoBehaviourPun, IPunObservable
         {
             this.photonView.RPC("ChangeDrawModeForPlayers", RpcTarget.All, true);
         }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            this.photonView.RPC("SpawnDrawindicatorForPlayers", RpcTarget.All);
+        }
     }
 
     
@@ -69,5 +73,12 @@ public class PlayerController : MonoBehaviourPun, IPunObservable
     private void ShowOtherPlayersFormOwningPlayer(bool ShowGroup)
     {
         OwningPlayer.FindAndShowOtherPlayers(ShowGroup);
+    }
+
+    
+    [PunRPC]
+    private void SpawnDrawindicatorForPlayers()
+    {
+        OwningPlayer.SpawnDrawIndicator();
     }
 }

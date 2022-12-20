@@ -5,12 +5,14 @@ using UnityEngine;
 public class DrawIndicator : MonoBehaviour
 {
 
+    [SerializeField] private float drawStepsBetweenPoints = 1000;
     [SerializeField]private ParticleSystem particle;
-    [SerializeField] private List<LineRenderer> lineRenderers;
+    private LineRenderer[] lineRenderers;
     // Start is called before the first frame update
     void Start()
     {
         StartIndicatingPath();
+        DestroyIndicator(30);
     }
 
     // Update is called once per frame
@@ -21,26 +23,59 @@ public class DrawIndicator : MonoBehaviour
 
     public void StartIndicatingPath()
     {
-        particle.transform.position = lineRenderers[0].GetPosition(0);
-        Debug.Log(lineRenderers[0].GetPosition(1));
-        StartCoroutine(FollowLines());
+
+        lineRenderers = GetComponentsInChildren<LineRenderer>();
+        if (lineRenderers.Length > 0)
+        {
+            StartCoroutine(FollowLines());
+        } 
     }
 
     private IEnumerator FollowLines()
     {
-        float ta = 0;
-        particle.transform.position = lineRenderers[0].GetPosition(0);
-        
-        for (int i = 0; i < 1000; i++)
+        int index = 0;
+        foreach (LineRenderer lr in lineRenderers)
         {
-            
-            ta = (float)i/1000;
-            particle.transform.position = Vector3.Lerp(lineRenderers[0].GetPosition(0), lineRenderers[0].GetPosition(1), ta);
-            Debug.Log(ta);
-            yield return new WaitForFixedUpdate();
-        }
-        yield return new WaitForSeconds(1);
-        StartIndicatingPath();
+            float t = 0;
+            particle.transform.position = lineRenderers[0].GetPosition(0);
+            particle.Play();
 
+            for (int i2 = 0; i2 < lr.positionCount-1; i2++)
+            {
+                Vector3 pos1 = lineRenderers[index].GetPosition(i2);
+                Vector3 pos2 = lineRenderers[index].GetPosition(i2 + 1);
+                float distance = Vector3.Distance(pos1, pos2);
+                int newDrawCount = Mathf.RoundToInt(drawStepsBetweenPoints * distance);
+
+                for (int i = 0; i < newDrawCount; i ++)
+                {
+
+                    t = (float)i / newDrawCount;
+                    particle.transform.localPosition = Vector3.Lerp(pos1, pos2, t);
+                    yield return new WaitForFixedUpdate();
+                }
+
+                particle.transform.localPosition = pos2;
+            }
+
+            index++;
+            particle.Stop();
+            yield return new WaitForSeconds(.5f);
+        }
+        StartIndicatingPath();
+    }
+
+    public void DestroyIndicator(float timeTillDestruction)
+    {
+        StartCoroutine(DestroyIndicatorCoroutine(timeTillDestruction));
+    }
+
+    private IEnumerator DestroyIndicatorCoroutine(float timeTillDestruction)
+    {
+        yield return new WaitForSeconds(timeTillDestruction);
+        particle.Stop();
+        StopCoroutine(FollowLines());
+        yield return new WaitForSeconds(2);
+        Destroy(this.gameObject);
     }
 }

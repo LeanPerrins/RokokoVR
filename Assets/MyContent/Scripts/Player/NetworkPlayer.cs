@@ -13,6 +13,8 @@ public class NetworkPlayer : MonoBehaviourPun
     [Header("GameObjects")]
     [SerializeField] private GameObject HandMeshL;
     [SerializeField] private GameObject HandMeshR;
+    [SerializeField] private GameObject ParticleMeshL;
+    [SerializeField] private GameObject ParticleMeshR;
     [SerializeField] private GameObject HandTransforms;
     [SerializeField] private GameObject Camera;
     [SerializeField] private GameObject PlayerModel;
@@ -22,6 +24,8 @@ public class NetworkPlayer : MonoBehaviourPun
     [Header("Drawing")]
     [SerializeField] private ParticleSystem particleL;
     [SerializeField] private ParticleSystem particleR;
+    [SerializeField] private GameObject DrawIndicatorPrefab;
+    private DrawIndicator drawIndicator;
 
     public bool canDraw { get; set; } = true;
     [SerializeField] private Transform HandLDrawTranform;
@@ -63,6 +67,7 @@ public class NetworkPlayer : MonoBehaviourPun
         group.GroupColor = new Color(r, g, b, a);
         group.GroupID = gID;
         particleL.startColor = group.GroupColor;
+        particleR.startColor = group.GroupColor;
         Renderer[] modelChildrenRenderer = PlayerModel.transform.GetComponentsInChildren<Renderer>();
         foreach(Renderer renderer in modelChildrenRenderer)
         {
@@ -97,6 +102,9 @@ public class NetworkPlayer : MonoBehaviourPun
             {
                 smr.enabled = false;
             }
+
+            ParticleMeshL.GetComponent<MeshRenderer>().enabled = false;
+            ParticleMeshR.GetComponent<MeshRenderer>().enabled = false;
         }
     }
     void Start()
@@ -152,6 +160,10 @@ public class NetworkPlayer : MonoBehaviourPun
             var emissionR = particleR.emission;
             emissionL.enabled = false;
             emissionR.enabled = false;
+            if (drawIndicator != null)
+            {
+                drawIndicator.DestroyIndicator(0);
+            }
         }
         else
         {
@@ -307,5 +319,20 @@ public class NetworkPlayer : MonoBehaviourPun
         {
             //smr.enabled = true;
         } 
+    }
+
+    public void SpawnDrawIndicator()
+    {
+        Debug.Log("Nokol");
+        if (drawIndicator != null)
+        {
+            drawIndicator.DestroyIndicator(0);
+        }
+
+        GameObject g = Instantiate(DrawIndicatorPrefab, Camera.transform.position, Camera.transform.rotation, Camera.transform);
+        drawIndicator = g.GetComponent<DrawIndicator>();
+
+        drawIndicator.transform.localPosition += new Vector3(0, -0.2f, 1) * .5f;
+        drawIndicator.transform.localRotation = Quaternion.Euler(0, 180, 0);
     }
 }

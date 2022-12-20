@@ -2100,12 +2100,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HandMeshL: {fileID: 7440274094238829001}
   HandMeshR: {fileID: 7440274094132407605}
+  ParticleMeshL: {fileID: 2661384265227964045}
+  ParticleMeshR: {fileID: 7614769414668885029}
   HandTransforms: {fileID: 7440274093025456815}
   Camera: {fileID: 7440274093981211278}
   PlayerModel: {fileID: 5460959948590810749}
   PlayerModelHead: {fileID: 7874600372824652869}
   particleL: {fileID: 7912974496927109827}
   particleR: {fileID: 2347135109245943915}
+  DrawIndicatorPrefab: {fileID: 1933482316349424441, guid: e1b3351a3561f4f46a74fd57a6194db0, type: 3}
   HandLDrawTranform: {fileID: 7440274093699555490}
   HandRDrawTranform: {fileID: 7440274092984210355}
 --- !u!1 &7440274093739919699
@@ -6015,6 +6018,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7614769414668885029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7436867786813958742, guid: 2e9de7d248f7d03438e61f873b351197, type: 3}
+  m_PrefabInstance: {fileID: 1051616529844434547}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7869351229224228121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7182566951170859882, guid: 2e9de7d248f7d03438e61f873b351197, type: 3}
@@ -6205,6 +6213,11 @@ PrefabInstance:
 --- !u!4 &2339540483938879409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7182566951170859882, guid: 2e9de7d248f7d03438e61f873b351197, type: 3}
+  m_PrefabInstance: {fileID: 4889270076507514075}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2661384265227964045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7436867786813958742, guid: 2e9de7d248f7d03438e61f873b351197, type: 3}
   m_PrefabInstance: {fileID: 4889270076507514075}
   m_PrefabAsset: {fileID: 0}
 --- !u!198 &7912974496927109827 stripped
