@@ -70,12 +70,11 @@ MonoBehaviour:
   - SetParticleSystem
   - SetParticleSystemL
   - SetParticleSystemR
-  - HideOtherPlayersFormOwningPlayer
-  - ShowOtherPlayersFormOwningPlayer
   - ChangeDrawModeForPlayers
   - DisableOrEnableParticles
+  - HideOtherPlayersFormOwningPlayer
   - SetupForGroup
-  - SpawnDrawindicator
+  - ShowOtherPlayersFormOwningPlayer
   - SpawnDrawindicatorForPlayers
   DisableAutoOpenWizard: 1
   ShowSettings: 0
