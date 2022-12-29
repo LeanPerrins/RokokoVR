@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyContent/Scenes/UnderInfluence.unity
     guid: c4211f40f00a3a24fbbee2b7b0664b62
-  - enabled: 0
-    path: Assets/Wave/Essence/Hand/Model/5.0.3-r.5/Demo/NaturalHand.unity
-    guid: 5a38ad072c92c8f4ab668c159dadbbed
   m_configObjects:
     com.htc.upm.wave.xrsdk.xrsettings: {fileID: 11400000, guid: 8d07ef3933408814ca2a0c622b0dcb87, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2457e5b23c94b9d4a8b58a0dca40ea95, type: 2}

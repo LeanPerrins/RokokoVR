@@ -6229,6 +6229,8 @@ GameObject:
   - component: {fileID: 5921918500133942113}
   - component: {fileID: 9183605916135879191}
   - component: {fileID: 6127250565047339855}
+  - component: {fileID: 8243941908405713493}
+  - component: {fileID: 8628062929726332049}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -6478,13 +6480,40 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 3
+  Synchronization: 1
   OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
+  observableSearch: 0
+  ObservedComponents:
+  - {fileID: 8243941908405713493}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &8243941908405713493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075121397791609121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa496618156505642a6ac708c778dcdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  local_fade12: 0
+--- !u!114 &8628062929726332049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075121397791609121}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be4cf382d1e411e47835b9b58354897f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  local_fade12: 0
 --- !u!1 &7079374973613801832
 GameObject:
   m_ObjectHideFlags: 0
@@ -7594,7 +7623,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8205931535951990509}
-  m_LocalRotation: {x: -0, y: 0.19816355, z: -0, w: 0.980169}
+  m_LocalRotation: {x: 0, y: 0.198162, z: 0, w: 0.98016936}
   m_LocalPosition: {x: 0.18322086, y: -0.011, z: 0.25648528}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7638,7 +7667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3d830ef66b485459e15992199096b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profileName: Fernanda
+  profileName: DemoProfile
   boneMapping: 0
   animator: {fileID: 3191555946708307501}
   customBoneMapping: {fileID: 0}

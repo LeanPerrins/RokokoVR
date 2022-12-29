@@ -77,6 +77,10 @@ MonoBehaviour:
   - ShowOtherPlayersFormOwningPlayer
   - SpawnDrawindicatorForPlayers
   - SpawnDrawIndicatorForPlayers
+  - TryOut1_Avatar_On
+  - TryOut2_Avatar_On
+  - Skybox_Day
+  - Skybox_Night
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
